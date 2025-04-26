@@ -1,45 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Party Reservation Switzerland</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DJ Party Vibe - Switzerland</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="background">
-        <div class="overlay">
-            <div class="content">
-                <h1>Welcome to the Best Party Experience in Switzerland!</h1>
+  <div class="hero-section">
+    <h1 class="neon-text">Switzerland's Ultimate Party Experience</h1>
 
-                <img src="images/closeup-dj-working-blue-light.jpg" alt="DJ Party" class="party-image">
+    <img src="images/closeup-dj-working-blue-light.jpg" alt="DJ Party" class="party-image">
 
-                <p class="description">
-                    🎶 Feel the rhythm, embrace the night!<br>
-                    Every Friday, Saturday, and Sunday, join Switzerland's hottest parties with epic DJs, vibrant lights, and unforgettable vibes.  
-                    Book now to create legendary memories! 🎉
-                </p>
+    <p class="description">🎶 We reserve the hottest parties in Switzerland. Feel the rhythm, see the lights, and live the night with the best DJs and vibrant crowds! 🎉</p>
 
-                <div class="form-container">
-                    <h2>Reserve Your Spot</h2>
-                    <form id="reservation-form">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                        <input type="email" id="email" placeholder="Your Email" required>
-                        <input type="tel" id="phone" placeholder="Your Phone" required>
-                        <input type="date" id="party-date" required>
-                        <input type="time" id="party-time" required>
-                        <button type="submit">Book Now</button>
-                    </form>
+    <div class="form-container">
+      <h2>Reserve Your Spot</h2>
+      <form id="reservation-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <input type="tel" id="phone" placeholder="Your Phone" required>
+        <input type="date" id="party-date" required>
+        <input type="time" id="party-time" required>
+        <button type="submit">Book Now</button>
+      </form>
 
-                    <div id="confirmation-message" class="message success">🎉 Reservation Successful! We'll get back to you soon!</div>
-                    <div id="error-message" class="message error">⚠️ Invalid date or time selected. Book Friday, Saturday (any time), or Sunday (8 PM only).</div>
-                </div>
-            </div>
-        </div>
+      <div id="confirmation-message" class="message success">🎉 Reservation Successful! We'll contact you soon!</div>
+      <div id="error-message" class="message error">⚠️ Please pick a correct day and time!</div>
     </div>
 
-    <script src="script.js"></script>
+  </div>
 
+  <script src="script.js"></script>
 </body>
 </html>
