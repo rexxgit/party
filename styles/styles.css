@@ -1,121 +1,144 @@
-/* General Reset */
+/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  color: white;
+  overflow-x: hidden;
 }
 
-.background {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('images/closeup-dj-working-blue-light.jpg') no-repeat center center/cover;
-    height: 100vh;
-    width: 100%;
-    position: relative;
+/* Hero Section */
+.hero-section {
+  min-height: 100vh;
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow-y: auto;
+/* Neon Text */
+.neon-text {
+  font-size: 2.8rem;
+  color: #ff007f;
+  text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+  animation: neon 1.5s ease-in-out infinite alternate;
+  margin-bottom: 30px;
 }
 
-.content {
-    text-align: center;
-    max-width: 800px;
-}
-
+/* Party Image */
 .party-image {
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: 0 0 20px #00f0ff;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
 }
 
+/* Description */
 .description {
-    margin: 20px 0;
-    font-size: 1.2rem;
-    line-height: 1.6;
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin-bottom: 40px;
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
 }
 
+/* Form Container */
 .form-container {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    padding: 20px;
-    margin-top: 30px;
-    box-shadow: 0 0 15px #00f0ff;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #ff007f;
+  width: 90%;
+  max-width: 500px;
 }
 
 .form-container h2 {
-    margin-bottom: 15px;
-    font-size: 2rem;
-    color: #00f0ff;
+  color: #ff007f;
+  margin-bottom: 20px;
 }
 
 form input, form button {
-    width: 90%;
-    padding: 12px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
 }
 
 form input {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
 form button {
-    background-color: #00f0ff;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+  background: #ff007f;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 form button:hover {
-    background-color: #00c9d6;
+  background: #ff4fa1;
 }
 
+/* Messages */
 .message {
-    margin-top: 15px;
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-    font-weight: bold;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  font-weight: bold;
 }
 
 .success {
-    background-color: #28a745;
-    color: white;
+  background-color: #28a745;
+  color: white;
 }
 
 .error {
-    background-color: #dc3545;
-    color: white;
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Animations */
+@keyframes neon {
+  from {
+    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f, 0 0 20px #ff007f;
+  }
+  to {
+    text-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .party-image {
-        max-width: 100%;
-    }
+  .neon-text {
+    font-size: 2rem;
+  }
 
-    .description {
-        font-size: 1rem;
-    }
+  .description {
+    font-size: 1rem;
+  }
 }
