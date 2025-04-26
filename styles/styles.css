@@ -1,0 +1,109 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #FF7E5F, #feb47b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+}
+
+/* Container to center form */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Reservation Card Styling */
+.reservation-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title and Subtitle */
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #FF7E5F;
+    margin-bottom: 10px;
+}
+
+.sub-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Input Group Styling */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    font-weight: 500;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    outline: none;
+    margin-top: 8px;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #FF7E5F;
+}
+
+/* Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #FF7E5F;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #feb47b;
+}
+
+/* Message Styling */
+.message {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#confirmation-message {
+    color: #28a745;
+}
+
+#error-message {
+    color: #e74c3c;
+}
