@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Reservation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section class="container">
+        <div class="reservation-card">
+            <h1 class="title">Reserve Your Party Spot</h1>
+            <p class="sub-title">Book your event for Friday, Saturday, or Sunday!</p>
+
+            <form id="reservation-form">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" id="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="party-date">Select Party Date</label>
+                    <input type="date" id="party-date" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="party-time">Select Party Time</label>
+                    <input type="time" id="party-time" required>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Reservation</button>
+            </form>
+
+            <div id="confirmation-message" class="message" style="display: none;">
+                <h3>Thank you! Your reservation is confirmed.</h3>
+            </div>
+            <div id="error-message" class="message" style="display: none;">
+                <h3>Sorry, this time is unavailable. Please select a valid time.</h3>
+            </div>
+        </div>
+    </section>
+    
+    <script src="app.js"></script>
+</body>
+</html>
