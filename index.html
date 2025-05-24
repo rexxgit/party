@@ -1,37 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DJ Party Vibe - Switzerland</title>
-  <link rel="stylesheet" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ SWISS - Premium Event DJ Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap');
+
+        :root {
+            --neon-pink: #ff2d75;
+            --neon-blue: #00f7ff;
+            --neon-purple: #9600ff;
+            --dark-bg: #0a0a0a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-bg);
+            color: white;
+            scroll-behavior: smooth;
+        }
+
+        .neon-text-pink {
+            text-shadow: 0 0 5px var(--neon-pink), 0 0 10px var(--neon-pink);
+            color: var(--neon-pink);
+        }
+
+        .neon-text-blue {
+            text-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+            color: var(--neon-blue);
+        }
+
+        .neon-border-pink {
+            box-shadow: 0 0 10px var(--neon-pink), inset 0 0 10px var(--neon-pink);
+            border: 1px solid var(--neon-pink);
+        }
+
+        .neon-border-blue {
+            box-shadow: 0 0 10px var(--neon-blue), inset 0 0 10px var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+        }
+
+        .neon-btn-pink:hover {
+            box-shadow: 0 0 15px var(--neon-pink), 0 0 25px var(--neon-pink);
+            transform: translateY(-2px);
+        }
+
+        .neon-btn-blue:hover {
+            box-shadow: 0 0 15px var(--neon-blue), 0 0 25px var(--neon-blue);
+            transform: translateY(-2px);
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 45, 117, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(255, 45, 117, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 45, 117, 0); }
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(255, 45, 117, 0.5);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--neon-pink);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+    </style>
 </head>
-<body>
+<body class="min-h-screen">
 
-  <div class="hero-section">
-    <h1 class="neon-text">Switzerland's Ultimate Party Experience</h1>
-
-    <img src="images/closeup-dj-working-blue-light.jpg" alt="DJ Party" class="party-image">
-
-    <p class="description">🎶 We reserve the hottest parties in Switzerland. Feel the rhythm, see the lights, and live the night with the best DJs and vibrant crowds! 🎉</p>
-
-    <div class="form-container">
-      <h2>Reserve Your Spot</h2>
-      <form id="reservation-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <input type="tel" id="phone" placeholder="Your Phone" required>
-        <input type="date" id="party-date" required>
-        <input type="time" id="party-time" required>
-        <button type="submit">Book Now</button>
-      </form>
-
-      <div id="confirmation-message" class="message success">🎉 Reservation Successful! We'll contact you soon!</div>
-      <div id="error-message" class="message error">⚠️ Please pick a correct day and time!</div>
+<!-- Navigation -->
+<nav class="bg-black bg-opacity-90 fixed w-full z-50 border-b border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <div class="flex-shrink-0 flex items-center">
+                <span class="text-2xl font-bold neon-text-pink">DJ SWISS</span>
+            </div>
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-baseline space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-pink-300 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#booking" class="nav-link text-white hover:text-pink-300 px-3 py-2 text-sm font-medium">Booking</a>
+                    <a href="#gallery" class="nav-link text-white hover:text-pink-300 px-3 py-2 text-sm font-medium">Gallery</a>
+                    <a href="#testimonials" class="nav-link text-white hover:text-pink-300 px-3 py-2 text-sm font-medium">Testimonials</a>
+                    <a href="#contact" class="nav-link text-white hover:text-pink-300 px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 border-t border-gray-800">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#home" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-900 rounded-md">Home</a>
+            <a href="#booking" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-900 rounded-md">Booking</a>
+            <a href="#gallery" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-900 rounded-md">Gallery</a>
+            <a href="#testimonials" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-900 rounded-md">Testimonials</a>
+            <a href="#contact" class="block px-3 py-2 text-base font-medium text-white hover:bg-gray-900 rounded-md">Contact</a>
+        </div>
+    </div>
+</nav>
 
-  </div>
+<!-- Hero Section -->
+<section id="home" class="pt-24 pb-20 md:pt-32 md:pb-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-gray-900">
+    <div class="max-w-7xl mx-auto">
+        <div class="md:flex md:items-center md:justify-between">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="neon-text-pink">ELEVATE</span>
+                    <span class="text-white">YOUR</span>
+                    <span class="neon-text-blue">EVENT</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8">
+                    Swiss-born DJ with over 10 years of experience creating unforgettable musical journeys. Specializing in electronic, house, and techno sets that keep the energy high all night long.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#booking" class="neon-btn-pink bg-pink-600 text-white px-8 py-3 rounded-full font-bold neon-border-pink">BOOK NOW</a>
+                    <a href="#gallery" class="neon-btn-blue bg-blue-600 text-white px-8 py-3 rounded-full font-bold neon-border-blue">SEE WORK</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden neon-border-pink pulse">
+                    <img src="https://images.unsplash.com/photo-1511671782772-c97d3e27f8b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="DJ Swiss performing" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <script src="script.js"></script>
+<!-- Placeholder: You can continue with booking, gallery, testimonials, contact sections here -->
+
 </body>
 </html>
